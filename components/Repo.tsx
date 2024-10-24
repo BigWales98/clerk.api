@@ -12,7 +12,7 @@ const Repo: React.FC<RepoProps> = async ({name}) => {
     await new Promise(resolve => setTimeout(resolve, 2000))
     const repo = await response.json()
 
-    console.log(repo)
+    //console.log(repo)
     
     return <div>
         <h3 className="text-xl font-bold">

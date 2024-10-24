@@ -1,6 +1,6 @@
 import { username } from "@/app/constants"
 import Link from "next/link"
-import { resolve } from "path"
+
 
 interface RepoProps {
     name: string
@@ -22,6 +22,7 @@ const RepoDirs: React.FC<RepoProps> = async ({name}) => {
 
     await new Promise((resolve) => setTimeout(resolve, 1000))
     const contents = await response.json()
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const dirs = contents.filter((content: any) => content.type === 'dir')
     //console.log(contents)
     //console.log(dirs)
@@ -30,7 +31,7 @@ const RepoDirs: React.FC<RepoProps> = async ({name}) => {
         <div className="mt-2">
             <h3 className="text-x1 font-bold">Directories</h3>
             <ul>
-                {
+                { // eslint-disable-next-line @typescript-eslint/no-explicit-any
                     dirs.map((dir: any) => (
                         <li key={dir.path}>
                             <Link className="underline"

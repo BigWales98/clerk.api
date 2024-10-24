@@ -32,7 +32,8 @@ export default async function ReposPage() {
   return <div>
     <h2 className='text-2x1 font-bold mb-4'> Github repositories of {username}</h2>
     <ul>
-        {repos.map((repo: any) => (
+        { // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        repos.map((repo: any) => (
                 <li key={repo.id} className='bg-gray-100 m-4 p-6 rounded-md w-full h-auto'>
                     <Link href={`/repos/${repo.name}`}>
                         <h3 className='text-2xl font-bold'>{repo.name}</h3>

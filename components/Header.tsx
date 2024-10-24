@@ -12,8 +12,12 @@ export default function Header() {
                     <div className='text-lg text-white'>Clerk Auth</div>
                     </Link>
                 </div>
+
                 <div className='flex items-center font-bold'>
-                    <Link href='/repos' className='text-gray-300 hover:text-white mr-4'>Repository</Link>
+                    <Link href='/repos' className='text-gray-300 hover:text-white mr-1'>Repository</Link>
+                </div>
+                <div className='flex items-center font-bold'>
+                    <Link href='/courses' className='text-gray-300 hover:text-white mr-4'>Courses</Link>
                 </div>
                 <div className='flex items-center font-bold'>
                     <SignedOut>
